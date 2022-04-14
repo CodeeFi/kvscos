@@ -1,10 +1,10 @@
-import React, { useState, useMemo } from 'react'
+import React, { useState } from 'react'
 import "../../css/auth.css"
 import Session from './Session';
 import { MomoizeYear } from './Session';
 import { useForm } from 'react-hook-form';
-
 import Notification from '../middleware/Notification';
+import registration from '../../api/RegisterApi';
 
 
 function RegisterLogin() {
@@ -41,6 +41,7 @@ function RegisterLogin() {
     // Hnadel the form data
     const loginSubmit = loginInfo => {
         Notification("", "Register sucessfull", "success");
+        registration(loginInfo);
         console.log(loginInfo);
     }
     const RegisterSubmit = registerinfo => {
