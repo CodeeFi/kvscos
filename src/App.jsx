@@ -1,11 +1,11 @@
-
-import './css/App';
+import React from "react";
+import RegisterLogin from "./components/auth/RegisterLogin";
 
 function App() {
   return (
-    <div className="App">
-      <h2>Hello world</h2>
-    </div>
+    <>
+      <RegisterLogin />
+    </>
   );
 }
 
