@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
-import "../../css/auth.css"
-import Session from './Session';
-import { MomoizeYear } from './Session';
+import "./auth.css";
+import Session from '../../components/Session';
+import { MomoizeYear } from '../../components/Session';
 import { useForm } from 'react-hook-form';
-import Notification from '../middleware/Notification';
-import registration from '../../api/RegisterApi';
-
+import registration from '../../API/authApi/RegisterAPI';
+import login from '../../API/authApi/LoginApI';
+import { useNavigate, } from 'react-router-dom';
 
 function RegisterLogin() {
 
-
+    const nagivate = useNavigate();
     const [isActive, setisActive] = useState({
         Xleft: "10px",
         Yleft: "600px",
@@ -39,14 +39,26 @@ function RegisterLogin() {
 
 
     // Hnadel the form data
-    const loginSubmit = loginInfo => {
-        Notification("", "Register sucessfull", "success");
-        registration(loginInfo);
-        console.log(loginInfo);
+    const loginSubmit = async (loginInfo) => {
+        const res = await login(loginInfo);
+        if (res) {
+            setTimeout(() => {
+                nagivate("/");
+            }, 2000);
+        }
     }
-    const RegisterSubmit = registerinfo => {
 
-        console.log(registerinfo);
+    const RegisterSubmit = async registerinfo => {
+        const res = await registration(registerinfo);
+        if (res) {
+            setisActive({
+                Xleft: "10px",
+                Yleft: "600px",
+                Zleft: "0",
+                loginheight: "411px",
+                loginMargin: "130px auto"
+            });
+        }
     }
 
 
@@ -90,15 +102,16 @@ function RegisterLogin() {
 
                     <form key={1} onSubmit={handleSubmit(loginSubmit)}>
                         <div id="login" className="input-group" style={{ left: isActive.Xleft }}  >
-                            <input type="email" {...register("email")} className="input-field" placeholder="Enter Email" required />
-                            <input type="password" {...register("passowrd")} className="input-field" placeholder="Enter Password" required />
-                            <input type="checkbox" {...register("savePassword")} className="check-box" /><span>remember password</span>
+                            <input type="text" {...register("userid")} className="input-field" placeholder="Enter Email or Enrolment_NO" required />
+                            <input type="password" {...register("password")} className="input-field" placeholder="Enter Password" required />
+                            <input type="checkbox" className="check-box" /><span>remember password</span>
                             <button type="submit" className="submit-btn">Log In</button>
                         </div>
                     </form>
                     {/* Register Section */}
                     <form key={2} onSubmit={handelSubmit2(RegisterSubmit)}>
                         <div id="register" style={{ left: isActive.Yleft }} className="input-group1">
+                            <input type="number" {...register2("enrolment_no")} className="input-field1" placeholder="Enrolment No" name="enrolment_no" required />
                             <input type="text" {...register2("first_name")} className="input-field1" placeholder="Enter Your First name" name="first_name" required />
                             <input type="text" {...register2("last_name")} className="input-field1" placeholder="Enter Your Last Name" name="last_name" required />
 

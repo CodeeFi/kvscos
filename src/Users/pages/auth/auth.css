@@ -27,7 +27,7 @@
 .form-box {
     background-color: white;
     width: 300px;
-    height: 554px;
+    height: 584px;
     position: relative;
     margin: 20px auto;
     border-radius: 3PX;
@@ -117,7 +117,7 @@ span {
 
 
 .input-group1 {
-    bottom: 33px;
+    bottom: 23px;
     position: absolute;
     width: 280px;
     transition: .5s;
