@@ -30,7 +30,7 @@ function RegisterLogin() {
     }
 
 
-    const { register, handleSubmit, formState: { errors } } = useForm({
+    const { register, handleSubmit } = useForm({
         mode: "onBlur",
     });
     const { register: register2, handleSubmit: handelSubmit2, formState: { errors: error2 } } = useForm({
