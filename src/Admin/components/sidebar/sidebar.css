@@ -1,0 +1,67 @@
+.sidebar {
+    flex: 1;
+    height: calc(100vh - 50px);
+    background-color: rgb(245, 240, 240);
+}
+
+ul {
+    margin-top: 40px;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: medium;
+    cursor: pointer;
+
+}
+
+li:hover {
+    background-color: lightgoldenrodyellow;
+    color: black;
+
+}
+
+a {
+    padding-left: 8px;
+    color: darkblue;
+}
+
+
+a {
+    display: inline;
+    text-decoration-line: none;
+}
+
+.std-sec {
+    padding: 5px;
+    font-weight: 400;
+    color: gray;
+}
+
+.studentsec {
+    margin-top: 10px;
+}
+
+.public {
+
+    margin-top: 20px;
+}
+
+.annousment {
+    padding: 5px;
+    font-weight: 400;
+    color: gray;
+}
+
+.staff {
+    margin-top: 20px;
+}
+
+.sta {
+    font-size: medium;
+    padding: 10px;
+    font-weight: 400;
+    color: gray;
+}
