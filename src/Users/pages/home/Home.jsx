@@ -6,7 +6,9 @@ function Home() {
     return (
         <>
             <Button variant="contained">Hello World</Button>
+
             <HomeIcon />
+
             <AcUnitIcon />
             <h2>This is user Home page</h2>
         </>
