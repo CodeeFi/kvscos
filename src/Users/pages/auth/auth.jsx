@@ -116,15 +116,15 @@ function RegisterLogin() {
                             <input type="text" {...register2("last_name")} className="input-field1" placeholder="Enter Your Last Name" name="last_name" required />
 
 
-                            <select {...register2("college")} className="input-field51" name="college">
-                                <option selected value hidden="2019">Colleges</option>
+                            <select  {...register2("college")} className="input-field51" name="college" required>
+                                <option hidden value="" >Colleges</option>
                                 <option value="KVSCOS">KVSCOS</option>
                                 <option value="SITE">SITE</option>
                                 <option value="Poltecnic">Poltecnic</option>
                             </select>
 
-                            <select {...register2("course")} className="input-field51" name="course">
-                                <option value="DEFAULT"> Course </option>
+                            <select {...register2("course")} className="input-field51" name="course" required>
+                                <option hidden value=""> Course </option>
                                 <option value="BCA">BCA</option>
                                 <option value="MCA">MCA</option>
                                 <option value="BSC">BSC.CS</option>
@@ -133,8 +133,8 @@ function RegisterLogin() {
                             <input type="email" {...register2("email")} className="input-field3" placeholder="Email Id" name="email" required />
                             <input type="number" {...register2("phone")} className="input-field3" placeholder="Phone No" name="phone" required />
 
-                            <select className="input-field5" {...register2("session_start_year")} defaultValue={'DEFAULT'} name="session_start_year" onChange={endYear}>
-                                <option value="DEFAULT">Session Start</option>
+                            <select className="input-field5" {...register2("session_start_year")} defaultValue={'DEFAULT'} name="session_start_year" onChange={endYear} required>
+                                <option value="">Session Start</option>
 
                                 {
                                     year.map((value, index) => {
@@ -150,8 +150,8 @@ function RegisterLogin() {
 
 
                             </select>
-                            <select className="input-field5" {...register2("session_end_year")} defaultValue={'DEFAULT'} name="session_end_year">
-                                <option value="DEFAULT">Session End</option>
+                            <select className="input-field5" {...register2("session_end_year")} defaultValue={'DEFAULT'} name="session_end_year" required>
+                                <option value="">Session End</option>
                                 {
                                     year.map((value, index) => {
                                         if (value > curYear)
