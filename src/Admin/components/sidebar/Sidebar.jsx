@@ -1,5 +1,7 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+
+
 import "./sidebar.css";
 import { DashboardRounded, HowToRegRounded, ContactPhoneRounded, Settings, PersonRounded, BackupRounded, QuestionAnswer, CampaignRounded, AccountCircleRounded } from '@mui/icons-material/';
 function Sidebar() {
@@ -8,21 +10,21 @@ function Sidebar() {
             <ul>
                 <li classname="link" >
                     <DashboardRounded />
-                    <Link to="/home"> Dashboard  </Link>
+                    <Link to="/admin"> Dashboard  </Link>
                 </li >
                 <div className="studentsec">
                     <p className='std-sec'>Suudent Section</p>
                     <li classname="link" >
                         <PersonRounded />
-                        <Link to="/home"> Students List </Link>
+                        <Link to="/studentList"> Students List </Link>
                     </li>
                     <li classname="link" >
                         <HowToRegRounded />
-                        <Link to="/home"> Students Approvle </Link>
+                        <Link to="/admin/studentApprove"> Students Approvle </Link>
                     </li>
                     <li classname="link" >
                         <ContactPhoneRounded />
-                        <Link to="/home"> Contect Info </Link>
+                        <Link to="admin/contectInfo"> Contect Info </Link>
                     </li>
 
                 </div>
@@ -31,31 +33,28 @@ function Sidebar() {
                     <p className='annousment'>Annousment</p>
                     <li classname="link" >
                         <BackupRounded />
-                        <Link to="/home">Result upload</Link>
+                        <Link to="admin/resultUpload">Result upload</Link>
                     </li>
                     <li classname="link" >
                         <QuestionAnswer />
-                        <Link to="/home">Student Query</Link>
+                        <Link to="admin/studentQuery">Student Query</Link>
                     </li>
                     <li classname="link" >
                         <CampaignRounded />
-                        <Link to="/home">Public Notice</Link>
+                        <Link to="admin/publidNotic">Public Notice</Link>
                     </li>
                 </div>
                 <div className="staff">
                     <p className='sta'>Admin</p>
                     <li classname="link" >
                         <AccountCircleRounded />
-                        <Link to="/home"> Profile </Link>
+                        <Link to="admin/profile"> Profile </Link>
                     </li>
                     <li classname="link" >
                         <Settings />
-                        <Link to="/home"> Setting </Link>
+                        <Link to="admin/setting"> Setting </Link>
                     </li>
                 </div>
-
-
-
             </ul>
         </div >
     )

@@ -1,7 +1,20 @@
 .container {
     display: flex;
+    position: relative;
 }
 
 .other {
     flex: 6;
+    padding: 1rem 1rem;
+    background: #f1f5f9;
+    min-height: calc(100vh- 90px);
+    min-height: min-content;
+
+}
+
+.cards {
+    display: flex;
+    padding: 1rem;
+    flex-flow: row;
+    justify-content: space-between;
 }
