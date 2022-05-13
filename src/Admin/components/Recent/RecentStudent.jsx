@@ -1,12 +1,13 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import "./recent.css";
 function RecentStudent() {
     return (
         <div className="students">
             <div className="card">
                 <div className="card-header">
-                    <h3>New Students</h3>
-                    <button>see all<span className=" las la-arrow-right"></span></button>
+                    <h4>Contect Info</h4>
+                    <Link to="/admin/contectInfo"> <button>see all<span className="las la-arrow-right aero"></span></button></Link>
                 </div>
                 <div className="card-body">
                     <div className="customer">
@@ -17,8 +18,9 @@ function RecentStudent() {
                             </div>
                         </div>
                         <div className="contact">
-                            <span className="las la-user-circle"></span>
-                            <span className="las la-comment"></span>
+                            <a href="mailto:">
+                                <span className="las la-comment"></span></a>
+                            <span className="las la-envelope"></span>
                             <span className="las la-phone"></span>
                         </div>
                     </div>

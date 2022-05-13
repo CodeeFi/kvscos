@@ -12,6 +12,7 @@ function Admin() {
                 <Route path='/login' element={<Login />}> </Route>
             </Routes>
 
+
         </div>
     )
 }

@@ -1,18 +1,17 @@
 import React from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import "./recent.css"
 function Recent() {
+    const pathname = useLocation().pathname + "/studentList";
     return (
-        <div class="projects">
-            <div class="card">
-                <div class="card-header">
-                    <h3>recent projects</h3>
-                    <button>see all<span class=" las la-arrow-right"></span></button>
+        <div className="projects">
+            <div className="card">
+                <div className="card-header">
+                    <h4>Student List</h4>
+                    <Link to={pathname}> <button>see all<span className=" las la-arrow-right aero"></span></button></Link>
                 </div>
-                <div class="card-body">
-                    <div class="table-responsive">
-
-
-
+                <div className="card-body">
+                    <div className="table-responsive">
                         <table width="100%">
                             <thead>
                                 <tr>
@@ -25,63 +24,63 @@ function Recent() {
                                 <tr>
                                     <td>UI/UX Design</td>
                                     <td>UI Team</td>
-                                    <td><span class="status purple"></span>
+                                    <td><span className="status purple"></span>
                                         review
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Web Development</td>
                                     <td>Frontend</td>
-                                    <td><span class="status pink"></span>
+                                    <td><span className="status pink"></span>
                                         in proress
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Ushop app</td>
                                     <td>Mobile Team</td>
-                                    <td><span class="status red"></span>
+                                    <td><span className="status red"></span>
                                         pending
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>UI/UX Design</td>
                                     <td>UI Team</td>
-                                    <td><span class="status purple"></span>
+                                    <td><span className="status purple"></span>
                                         review
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Web Development</td>
                                     <td>Frontend</td>
-                                    <td><span class="status pink"></span>
+                                    <td><span className="status pink"></span>
                                         in proress
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Ushop app</td>
                                     <td>Mobile Team</td>
-                                    <td><span class="status red"></span>
+                                    <td><span className="status red"></span>
                                         pending
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>UI/UX Design</td>
                                     <td>UI Team</td>
-                                    <td><span class="status purple"></span>
+                                    <td><span className="status purple"></span>
                                         review
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Web Development</td>
                                     <td>Frontend</td>
-                                    <td><span class="status pink"></span>
+                                    <td><span className="status pink"></span>
                                         in proress
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Ushop app</td>
                                     <td>Mobile Team</td>
-                                    <td><span class="status red"></span>
+                                    <td><span className="status red"></span>
                                         pending
                                     </td>
                                 </tr>

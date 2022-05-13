@@ -1,30 +1,23 @@
 import React from 'react'
 import Topbar from "../../components/Topbar/Topbar";
 import Sidebar from "../../components/sidebar/Sidebar";
-import Card from "../../components/card/card";
-import Recent from '../../components/Recent/Recent';
-import "./home.css";
-import RecentStudent from '../../components/Recent/RecentStudent';
-
+import HomeComponent from './HomeComponent';
+import { Routes, Route } from "react-router-dom";
+import StudentList from '../../components/studentList/StudentList';
 function Dashboard() {
     return (
         <>
             <div className='Dashboard'>
                 <Topbar />
-                <div className="container">
+                <div className="containers">
                     <Sidebar />
                     <div className="other">
-                        <div class="cards">
-                            <Card />
-                            <Card />
-                            <Card />
-                            <Card />
-                        </div>
-                        <div class="recent-grid">
-                            <Recent />
-                            <RecentStudent />
-                        </div>
+                        <Routes>
+                            <Route exect path='/' element={<HomeComponent />}> </Route>
+                            <Route path='/studentList' element={<StudentList />}> </Route>
+                        </Routes>
                     </div>
+
                 </div>
             </div>
         </>

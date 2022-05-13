@@ -9,13 +9,14 @@
 }
 
 ul {
-    margin-top: 40px;
+    margin-top: 40px !important;
+    padding-left: 0 !important;
 }
 
 li {
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 10px !important;
     font-size: medium;
     cursor: pointer;
 
@@ -35,7 +36,7 @@ a {
 
 a {
     display: inline;
-    text-decoration-line: none;
+    text-decoration-line: none !important;
 }
 
 .std-sec {
