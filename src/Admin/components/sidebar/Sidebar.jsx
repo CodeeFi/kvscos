@@ -41,7 +41,7 @@ function Sidebar() {
                     </li>
                     <li className="link" >
                         <CampaignRounded />
-                        <Link to="/admin/publidNotic">Public Notice</Link>
+                        <Link to="/admin/publidNotice">Public Notice</Link>
                     </li>
                 </div>
                 <div className="staff">

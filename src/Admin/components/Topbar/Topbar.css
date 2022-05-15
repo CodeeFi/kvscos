@@ -16,7 +16,7 @@ header {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content: space-between;
-    padding: 1rem;
+    padding: .7rem;
     width: calc(100%-345%);
     min-height: min-content;
     /* z-index: 100; */

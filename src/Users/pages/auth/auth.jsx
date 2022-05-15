@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import "./auth.css";
+import "./auth.css"
 import Session from '../../components/Session';
 import { MomoizeYear } from '../../components/Session';
 import { useForm } from 'react-hook-form';

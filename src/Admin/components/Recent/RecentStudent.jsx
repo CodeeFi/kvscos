@@ -21,7 +21,9 @@ function RecentStudent() {
                             <a href="mailto:">
                                 <span className="las la-comment"></span></a>
                             <span className="las la-envelope"></span>
-                            <span className="las la-phone"></span>
+                            <a href="tel:+919631526557">
+                                <span className="las la-phone"></span>
+                            </a>
                         </div>
                     </div>
 

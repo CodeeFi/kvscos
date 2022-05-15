@@ -1,7 +1,6 @@
 import React from 'react'
 
-
-function StudentList() {
+function Contectinfo() {
     return (
         <>
             <div className="card">
@@ -91,4 +90,4 @@ function StudentList() {
     )
 }
 
-export default StudentList
+export default Contectinfo

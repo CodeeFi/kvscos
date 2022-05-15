@@ -1,0 +1,99 @@
+.queryContainer {
+    width: 95%;
+    height: 100vh;
+    display: flex;
+    margin: 0px auto;
+}
+
+.showQuery {
+    flex: 5;
+    padding: 5px 11px;
+}
+
+.replyQuery {
+    flex: 4;
+}
+
+.query {
+    margin: 20px auto;
+    padding: 10px 20px;
+    border-radius: 7px;
+    background-color: snow;
+    -webkit-box-shadow: 7px -8px 21px -12px rgba(0, 0, 0, 0.72);
+    -moz-box-shadow: 7px -8px 21px -12px rgba(0, 0, 0, 0.72);
+    box-shadow: 7px -4px 20px -5px rgba(0, 0, 0, 0.72);
+}
+
+.query .username {
+    font-weight: 400;
+    padding: 2px 2px;
+}
+
+.query .queryTitle {
+    padding: 3px 7px;
+    padding-bottom: 15px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.btn {
+    padding: 8px 15px !important;
+    border: none;
+    outline: none;
+    margin-bottom: 9px;
+    cursor: pointer;
+    background-color: rgb(218, 33, 147);
+    color: white;
+    font-weight: bold;
+}
+
+.query .message {
+    padding: 3px 6px;
+    display: none;
+    transition: transform 1s
+}
+
+
+.query .message>h5 {
+    margin: 4px 0;
+    font-size: medium;
+    font-weight: 600;
+}
+
+.query .message .msg {
+    padding: 4px 8px;
+    font-weight: 350;
+    margin-bottom: 9px;
+}
+
+
+/* Section 2 Replay */
+
+.replyQuery .reply {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 50vh;
+    margin: 20px auto;
+    padding: 20px 20px;
+    border-radius: 7px;
+    background-color: snow;
+    -webkit-box-shadow: 7px -8px 21px -12px rgba(0, 0, 0, 0.72);
+    -moz-box-shadow: 7px -8px 21px -12px rgba(0, 0, 0, 0.72);
+    box-shadow: 7px -4px 20px -5px rgba(0, 0, 0, 0.72);
+}
+
+.messagearea {
+    resize: none;
+}
+
+.reply>* {
+    padding: 5px 9px;
+    border-radius: 4px;
+    outline-width: 2px;
+    outline-color: teal;
+}
+
+.reply>.btn {
+    margin: 15px 0;
+}

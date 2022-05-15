@@ -15,9 +15,8 @@ function AuthUser() {
 
 function ProtectedRoute() {
     const auth = AuthUser();
-    // let auth = false;
     return (
-        auth ? <Outlet /> : <Navigate to={"/home/auth"}> </Navigate>
+        auth ? <Outlet path="/*" /> : <Navigate to={"/admin/login"}> </Navigate>
     )
 }
 

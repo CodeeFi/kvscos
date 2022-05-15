@@ -1,0 +1,175 @@
+:root {
+    --main-color: #DD2F6E;
+    --color-dark: #1D2231;
+    --text-gray: #6a97d6;
+}
+
+.containerupload {
+    width: 90%;
+    margin: 1px auto;
+    background-color: white;
+    font-weight: normal;
+    -webkit-box-shadow: 7px -8px 21px -12px rgba(0, 0, 0, 0.72);
+    -moz-box-shadow: 7px -8px 21px -12px rgba(0, 0, 0, 0.72);
+    box-shadow: 7px -8px 12px -12px rgba(0, 0, 0, 0.72);
+}
+
+.fileUploader {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 1px auto;
+    padding: 10px 20px;
+}
+
+.upload {
+    display: flex;
+    width: 300px;
+    height: 150px;
+    border: 2px dashed black;
+    justify-content: center;
+    color: var(--text-gray);
+    cursor: pointer;
+    flex-direction: column;
+    align-items: center;
+}
+
+#icon {
+    font-size: 40px;
+}
+
+.fileshow {
+    width: inherit;
+    display: flex;
+    height: 40px;
+    background-color: rgb(215, 241, 250);
+    margin-top: 20px;
+    visibility: hidden;
+}
+
+.filehide {
+    visibility: visible;
+}
+
+.fileshow>#fileicon {
+
+    font-size: 40px;
+    margin: 2px 7px;
+    color: var(--text-gray);
+    padding: 3px 7px;
+
+}
+
+.fileshow>p {
+    margin: 2px 8px;
+    padding: 5px 7px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#uploadbtn {
+    padding: 12px 18px;
+    margin: 5px auto;
+    border: none;
+    background-color: var(--main-color);
+    color: white;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    font-size: medium;
+    border-radius: 5px;
+}
+
+
+/* Data Form Css */
+.inputdata {
+    width: 75%;
+    margin: 1px auto;
+    /* background-color: lightsteelblue; */
+    padding: 20px 30px;
+
+}
+
+
+.dataform {
+    display: flex;
+    flex-direction: column;
+}
+
+.dataform>label {
+    font-size: medium;
+    font-style: normal;
+}
+
+.dataform>*:not(label) {
+    margin: 6px 0;
+    padding: 8px 5px !important;
+    outline-color: rgba(106, 151, 214, 0.663);
+    outline-width: 2px;
+    outline-offset: 1px;
+    border: 1px solid #6a97d6;
+}
+
+.sessionYear {
+    border: none !important;
+}
+
+.dataform>input {
+
+    outline-color: #6a97d6;
+
+}
+
+.sessionYear {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.sessionstrt {
+    font-size: medium;
+    flex: 50%;
+}
+
+.sessionend {
+    font-size: medium;
+    flex: 50%;
+}
+
+
+.sessionstrt>select,
+.sessionend>select {
+    width: 95%;
+    border: none;
+    border-bottom: 1px solid gray;
+    padding: 5px;
+    margin: 2px;
+    margin-right: 10px;
+    outline: none;
+}
+
+.type {
+    display: block;
+    border: none !important;
+}
+
+.type>input {
+    margin-left: 5px;
+}
+
+.ext {
+    margin-left: 20px !important;
+}
+
+.dataform .btn {
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none !important;
+}
+
+/* Data Form Css */

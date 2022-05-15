@@ -6,6 +6,11 @@ import reportWebVitals from './reportWebVitals';
 import { ReactNotifications } from 'react-notifications-component';
 import 'react-notifications-component/dist/theme.css'
 
+import {
+  QueryClientProvider,
+  QueryClient,
+} from 'react-query';
+const Qclient = new QueryClient();
 
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
@@ -13,7 +18,9 @@ const root = ReactDOM.createRoot(container);
 root.render(
   <React.StrictMode>
     <ReactNotifications />
-    <App />
+    <QueryClientProvider client={Qclient}>
+      <App />
+    </QueryClientProvider>
   </React.StrictMode>
 )
 
