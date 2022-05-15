@@ -18,8 +18,6 @@ function Admin() {
                 <Route path='/login' element={<Login />}> </Route>
                 <Route path='/register' element={<AdminRegister />}> </Route>
             </Routes>
-
-
         </div>
     )
 

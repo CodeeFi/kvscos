@@ -9,7 +9,6 @@ import Contectinfo from '../../components/contectInfo/Contectinfo';
 import ResultUpload from "../../components/resultUpload/ResultUpload";
 import PublicNotice from "../../components/publicNotice/PublicNotice";
 import StudentQuery from "../../components/studentQuery/StudentQuery"
-import Login from '../auth/Login';
 function Dashboard() {
     return (
         <>
@@ -28,7 +27,6 @@ function Dashboard() {
                             <Route path='/publidNotice' element={<PublicNotice />}> </Route>
                             <Route path='/profile' element={<StudentList />}> </Route>
                             <Route path='/setting' element={<StudentList />}> </Route>
-                            <Route path='/login' element={<Login />}> </Route>
                         </Routes>
                     </div>
 
