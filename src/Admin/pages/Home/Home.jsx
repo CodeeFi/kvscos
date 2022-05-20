@@ -59,7 +59,7 @@ function Dashboard() {
                             <Route path='/resultUpload' element={<ResultUpload />}> </Route>
                             <Route path='/studentQuery' element={<StudentQuery />}> </Route>
                             <Route path='/publidNotice' element={<PublicNotice />}> </Route>
-                            <Route path='/profile' element={<Profile />}> </Route>
+                            <Route path='/profile' element={<Profile props={admin} />}> </Route>
                             <Route path='/setting' element={<Setting />}> </Route>
                         </Routes>
                     </div>

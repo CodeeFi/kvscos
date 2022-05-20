@@ -7,15 +7,10 @@ import StudentContect from './StudentContect';
 const fetcher = () => api.get(`${process.env.REACT_APP_API_HOST}/admin/studentsContect/7`);
 function RecentStudent() {
     const { data, isLoading, isError } = useQuery("contectInfo", fetcher);
-
     if (isLoading)
         return <h2> Loading Data </h2>
-
     if (isError)
         return <h4>SomeThing Went Wrong</h4>
-
-
-    console.log(data);
 
     return (
         <div className="students">

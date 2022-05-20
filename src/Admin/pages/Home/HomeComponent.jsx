@@ -31,7 +31,7 @@ function HomeComponent() {
             <div className="cards">
                 <Card props={{ data: data.approvedStudent, name: "Approved Student" }} />
                 <Card props={{ data: approvel, name: "Approvle" }} />
-                <Card props={{ data: 55, name: "Total Query" }} />
+                <Card props={{ data: data.totalQuery, name: "Total Query" }} />
                 <Card props={{ data: data.totalStudents, name: "Total Student" }} />
             </div>
             <div className="recent-grid">
