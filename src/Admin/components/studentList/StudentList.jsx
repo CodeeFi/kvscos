@@ -1,7 +1,19 @@
 import React from 'react'
+import api from "../../../API/useApi";
+import { useQuery } from "react-query";
+import Student from "../Recent/Student";
 
+const stdInfo = () => api.get(`${process.env.REACT_APP_API_HOST}/admin/studentsInfo`);
 
 function StudentList() {
+
+
+    const { data, isLoading, isError } = useQuery("allStudent", stdInfo);
+    if (isLoading)
+        return <h2> Loading Data </h2>
+
+    if (isError)
+        return <h4>SomeThing Went Wrong</h4>
     return (
         <>
             <div className="card">
@@ -13,75 +25,16 @@ function StudentList() {
                         <table width="100%">
                             <thead>
                                 <tr>
-                                    <td>Project Title</td>
-                                    <td>Department</td>
-                                    <td>status</td>
+                                    <td>Enrolment No</td>
+                                    <td>Full Name</td>
+                                    <td>Course</td>
+                                    <td>Status</td>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>UI/UX Design</td>
-                                    <td>UI Team</td>
-                                    <td><span className="status purple"></span>
-                                        review
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Web Development</td>
-                                    <td>Frontend</td>
-                                    <td><span className="status pink"></span>
-                                        in proress
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Ushop app</td>
-                                    <td>Mobile Team</td>
-                                    <td><span className="status red"></span>
-                                        pending
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>UI/UX Design</td>
-                                    <td>UI Team</td>
-                                    <td><span className="status purple"></span>
-                                        review
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Web Development</td>
-                                    <td>Frontend</td>
-                                    <td><span className="status pink"></span>
-                                        in proress
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Ushop app</td>
-                                    <td>Mobile Team</td>
-                                    <td><span className="status red"></span>
-                                        pending
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>UI/UX Design</td>
-                                    <td>UI Team</td>
-                                    <td><span className="status purple"></span>
-                                        review
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Web Development</td>
-                                    <td>Frontend</td>
-                                    <td><span className="status pink"></span>
-                                        in proress
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Ushop app</td>
-                                    <td>Mobile Team</td>
-                                    <td><span className="status red"></span>
-                                        pending
-                                    </td>
-                                </tr>
+                                {data.studentInfo && data.studentInfo.map((student, id) => {
+                                    return <Student key={id} props={student} />
+                                })}
                             </tbody>
                         </table>
                     </div>

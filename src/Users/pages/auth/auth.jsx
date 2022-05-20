@@ -102,8 +102,8 @@ function RegisterLogin() {
 
                     <form key={1} onSubmit={handleSubmit(loginSubmit)}>
                         <div id="login" className="input-group" style={{ left: isActive.Xleft }}  >
-                            <input type="text" {...register("userid")} className="input-field" placeholder="Enter Email or Enrolment_NO" required />
-                            <input type="password" {...register("password")} className="input-field" placeholder="Enter Password" required />
+                            <input name='email' type="text" {...register("userid")} className="input-field" placeholder="Enter Email or Enrolment_NO" required />
+                            <input name='password' type="password" {...register("password")} className="input-field" placeholder="Enter Password" required />
                             <input type="checkbox" className="check-box" /><span>remember password</span>
                             <button type="submit" className="submit-btn">Log In</button>
                         </div>

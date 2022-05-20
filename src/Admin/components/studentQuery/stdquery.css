@@ -22,6 +22,7 @@
     -webkit-box-shadow: 7px -8px 21px -12px rgba(0, 0, 0, 0.72);
     -moz-box-shadow: 7px -8px 21px -12px rgba(0, 0, 0, 0.72);
     box-shadow: 7px -4px 20px -5px rgba(0, 0, 0, 0.72);
+    cursor: pointer;
 }
 
 .query .username {
@@ -47,20 +48,20 @@
     font-weight: bold;
 }
 
-.query .message {
+.query #message {
     padding: 3px 6px;
     display: none;
     transition: transform 1s
 }
 
 
-.query .message>h5 {
+.query #message>h5 {
     margin: 4px 0;
     font-size: medium;
     font-weight: 600;
 }
 
-.query .message .msg {
+.query #message .msg {
     padding: 4px 8px;
     font-weight: 350;
     margin-bottom: 9px;
@@ -96,4 +97,12 @@
 
 .reply>.btn {
     margin: 15px 0;
+}
+
+.show {
+    display: block !important;
+}
+
+.hide {
+    display: none;
 }

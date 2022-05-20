@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "./Topbar.css";
 import "./download.jpg";
+import { userDetails } from "../../pages/Home/Home";
 // import { NotificationsNone, Settings, Language } from '@mui/icons-material';
 function Topbar() {
+    const data = useContext(userDetails);
     return (
         <>
             <header>
@@ -18,7 +20,7 @@ function Topbar() {
                 <div className="user-wrapper">
                     <img src="download.jpg" width="40px" height="40px" alt="" />
                     <div>
-                        <h5>mohd athar</h5><small>super admin</small>
+                        <h5>{data && `${data.firstName}  ${data.lastName}`}</h5><small>{data && data.adminType ? "super admin" : "admin"}</small>
                     </div>
                 </div>
             </header>

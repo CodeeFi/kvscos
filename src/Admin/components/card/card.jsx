@@ -3,8 +3,6 @@ import React from 'react'
 import "./card.css";
 
 function card({ props }) {
-
-    console.log(props);
     return (
 
         <div className="card-single">

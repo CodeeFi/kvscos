@@ -3,9 +3,14 @@ import { Outlet, Navigate } from "react-router-dom";
 
 function AuthUser() {
     try {
-        const obj = JSON.parse(localStorage.getItem("userInfo"));
-        if (obj.secret)
-            return true;
+        const obj = JSON.parse(localStorage.getItem("admin-auth"));
+        if (obj && obj.token) {
+            return true
+        }
+        else {
+            return false;
+        }
+
     } catch (error) {
         console.log(error);
         return false

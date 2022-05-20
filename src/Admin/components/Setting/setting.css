@@ -1,0 +1,156 @@
+.studentapprovle {
+    background-color: white;
+    margin: 0 20px;
+    padding: 10px 15px;
+}
+
+.teacher-list {
+    width: 63% !important;
+
+}
+
+.uploadFile {
+    display: flex;
+    justify-content: space-between;
+}
+
+#uploadimg {
+    display: none;
+}
+
+.uploadFile {
+    width: 90%;
+    margin: 5px auto;
+    padding: 5px 9px;
+}
+
+.uploadimg {
+    width: 80%;
+    padding: 10px 12px;
+    border: 1px solid gray;
+}
+
+.btn-upload {
+    margin: 2px 9px;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 9px;
+    background-color: rgb(68, 243, 68);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.teacherPofile {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 5px auto;
+    padding: 5px 9px;
+}
+
+.teacherPofile>input {
+    margin: 5px 0;
+    outline-color: aquamarine;
+    padding: 5px 7px;
+    border: 1px solid lightblue;
+}
+
+.btn-submit {
+    padding: 10px 22px;
+    border: none;
+    border-radius: 9px;
+    background-color: rgb(8, 94, 12);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+
+
+/* College Course. */
+
+
+.card-head {
+    padding: 0px 0 15px 30px;
+    border-bottom: 1px solid gray;
+}
+
+.collegeCourc {
+    width: 46%;
+    margin: 20px 15px;
+    padding: 20px 5px;
+    background-color: white;
+
+}
+
+.setCollege {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 15px auto;
+}
+
+.add-course {
+    width: 25%;
+    border: none;
+    outline: none;
+    padding: 2px 6px !important;
+    background-color: rgb(36, 21, 179);
+    color: white;
+    cursor: pointer;
+}
+
+
+
+.setCollege>input {
+    width: 70%;
+    outline-color: lightblue;
+    border: 1px solid rgb(36, 21, 179);
+    padding: 5px 10px;
+}
+
+.setCources {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+}
+
+.setCources>select,
+input {
+    padding: 5px 10px;
+    margin: 5px 2px;
+    outline-color: lightsteelblue;
+    border: 1px solid lightblue;
+}
+
+.btn-add {
+    padding: 6px 9px;
+    margin: 8px 1px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background-color: rgb(95, 26, 223);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.courseList {
+    margin-top: 20px;
+}
+
+
+/* Course Delete BTn */
+
+.btn-rm {
+    padding: 5px 8px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: brown;
+    font-weight: bold;
+    cursor: pointer;
+}

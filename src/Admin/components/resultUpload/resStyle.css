@@ -173,3 +173,23 @@
 }
 
 /* Data Form Css */
+
+
+
+
+
+/* Result LIst Button */
+
+#actionbtn {
+    padding: 5px 8px;
+    border: none;
+    outline: none;
+    background-color: green;
+    color: white;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.btn-delete {
+    background-color: red !important;
+}
