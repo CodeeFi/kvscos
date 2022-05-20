@@ -16,7 +16,9 @@ function Login() {
         data = await api.post(`${apihost}/auth/admin/login`, e);
         if (data.status > 200) {
             localStorage.setItem("admin-auth", "");
-            Notification("Authorazition", data.msg, "danger");
+            const err = JSON.parse(data);
+            console.log(err);
+            Notification("Authorazition", "invalid id and Password", "danger");
             return false;
         }
         Notification("Authorazition", "login Sucessfully", "success")
@@ -29,7 +31,7 @@ function Login() {
     return (
         <div className="loginbody">
             <div className="form-container">
-                <h3>Admin Registration</h3>
+                <h3>Admin Login</h3>
 
                 <form onSubmit={handleSubmit(login)} className="form">
                     <div className="input-container">
