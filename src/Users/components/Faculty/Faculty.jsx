@@ -1,7 +1,12 @@
 import React from 'react'
 import "./faculty.css";
 import { Email, Facebook, Instagram, Twitter, } from '@mui/icons-material';
+import { useQuery } from 'react-query';
+import api from "../../../API/useApi"
 function Faculty() {
+    useQuery("getTeacherProfile", () => {
+        api.get()
+    })
     return (
         <>
             <section className='faculty'>
