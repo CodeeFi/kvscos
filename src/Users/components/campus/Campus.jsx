@@ -17,9 +17,9 @@ function Campus() {
                     </div>
                     <div class="campus-col">
                         <video autoPlay loop muted src="campus1.mp4" ></video>
-                        <div class="layer">
+                        {/* <div class="layer">
                             <h3>Play Ground</h3>
-                        </div>
+                        </div> */}
                     </div>
                     <div class="campus-col">
                         <img src="campus3.png" alt='college' />

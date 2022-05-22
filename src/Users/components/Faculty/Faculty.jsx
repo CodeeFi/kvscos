@@ -1,5 +1,6 @@
 import React from 'react'
 import "./faculty.css";
+<<<<<<< HEAD
 import { Email, Facebook, Instagram, Twitter, } from '@mui/icons-material';
 import { useQuery } from 'react-query';
 import api from "../../../API/useApi"
@@ -7,43 +8,37 @@ function Faculty() {
     useQuery("getTeacherProfile", () => {
         api.get()
     })
+=======
+import { useQuery } from 'react-query';
+import api from "../../../API/useApi"
+import ProfileCard from './ProfileCard';
+function Faculty() {
+    const { data, isLoading, isError } = useQuery("getTeacherProfile", () => {
+        return api.get(`${process.env.REACT_APP_API_HOST}/home/teacherList`);
+    });
+
+    if (isLoading) {
+        return <h3>Data is loading</h3>
+    }
+    if (isError) {
+        return <h3>SomeThing Went Wrong</h3>
+    }
+
+>>>>>>> dev
     return (
         <>
             <section className='faculty'>
                 <h1>Our Faculty.</h1>
                 <div className="profile">
-                    <div className="profile-card">
-                        <div className="profile-header">
-                            <div className="banner"></div>
-                            <div className="profileimg">
-                                <img src="download.jpg" alt="" />
-                            </div>
-                        </div>
-                        <div className="profile-body">
-                            <div className="name">
-                            </div>
-                            <div className="profieldata">
-                                <h5>Aadarsh Singh</h5>
-                                <p>Proffessor</p>
-                                <p>Computer Application</p>
-                            </div>
-                            <div className="socal-icon">
-                                <a id="icon" href="mailto:aadarsh121@gm.com">
-                                    <Email id="icon" />
-                                </a>
-                                <a id="icon" href="mailto:aadarsh121@gm.com">
-                                    <Facebook id="icon" />
-                                </a>
-                                <a id="icon" href="mailto:aadarsh121@gm.com">
-                                    <Instagram id="icon" />
-                                </a>
-                                <a id="icon" href="mailto:aadarsh121@gm.com">
-                                    <Twitter id="icon" />
-                                </a>
-                            </div>
-                        </div>
 
-                    </div>
+                    {
+
+                        data[0] && data?.slice(0, 3)?.map((profile, index) => {
+                            return <ProfileCard key={index} props={profile} />
+                        })
+                    }
+
+
                 </div>
             </section>
 

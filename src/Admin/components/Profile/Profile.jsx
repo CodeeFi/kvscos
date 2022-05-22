@@ -99,6 +99,7 @@ function Profile({ props }) {
         return <h2>SomeThign Went Wrong</h2>
     }
 
+    console.log(props);
 
     return (
         <>
@@ -149,7 +150,7 @@ function Profile({ props }) {
                                     <tbody>
 
                                         {
-                                            data?.map((data, index) => {
+                                            props.adminType && data?.map((data, index) => {
                                                 return (
 
                                                     <tr>
