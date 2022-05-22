@@ -6,9 +6,12 @@ import { useForm } from 'react-hook-form';
 import registration from '../../API/authApi/RegisterAPI';
 import login from '../../API/authApi/LoginApI';
 import { useNavigate, } from 'react-router-dom';
+import College from "../../components/CollegesCources/College";
+import Cources from '../../components/CollegesCources/Cources';
+import { useQueryClient } from "react-query";
 
 function RegisterLogin() {
-
+    const queryClint = useQueryClient()
     const nagivate = useNavigate();
     const [isActive, setisActive] = useState({
         Xleft: "10px",
@@ -61,9 +64,12 @@ function RegisterLogin() {
         }
     }
 
+    const [cid, setCid] = useState({});
 
-
-
+    const college = (e) => {
+        setCid({ id: e.target.value });
+        queryClint.invalidateQueries("getCources");
+    }
 
     return (
         <>
@@ -116,18 +122,14 @@ function RegisterLogin() {
                             <input type="text" {...register2("last_name")} className="input-field1" placeholder="Enter Your Last Name" name="last_name" required />
 
 
-                            <select  {...register2("college")} className="input-field51" name="college" required>
+                            <select    {...register2("college", { required: "invalid College" })} className="input-field51" name="college" onChange={college} required>
                                 <option hidden value="" >Colleges</option>
-                                <option value="KVSCOS">KVSCOS</option>
-                                <option value="SITE">SITE</option>
-                                <option value="Poltecnic">Poltecnic</option>
+                                <College />
                             </select>
 
-                            <select {...register2("course")} className="input-field51" name="course" required>
-                                <option hidden value=""> Course </option>
-                                <option value="BCA">BCA</option>
-                                <option value="MCA">MCA</option>
-                                <option value="BSC">BSC.CS</option>
+                            <select {...register2("course", { required: "invalid Course" })} className="input-field51" name="course" required>
+                                <option hidden value=""> Course</option>
+                                <Cources props={cid} />
                             </select>
 
                             <input type="email" {...register2("email")} className="input-field3" placeholder="Email Id" name="email" required />

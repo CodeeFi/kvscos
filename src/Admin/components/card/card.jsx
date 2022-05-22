@@ -11,7 +11,7 @@ function card({ props }) {
                 <span>{props.name}</span>
             </div>
             <div>
-                <span className="las la-users"></span>
+                <span className={props.logo}></span>
             </div>
         </div>
     )

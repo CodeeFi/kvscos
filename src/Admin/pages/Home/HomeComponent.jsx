@@ -29,10 +29,10 @@ function HomeComponent() {
     return (
         <>
             <div className="cards">
-                <Card props={{ data: data.approvedStudent, name: "Approved Student" }} />
-                <Card props={{ data: approvel, name: "Approvle" }} />
-                <Card props={{ data: data.totalQuery, name: "Total Query" }} />
-                <Card props={{ data: data.totalStudents, name: "Total Student" }} />
+                <Card props={{ data: data.approvedStudent, name: "Approved Student", logo: "las la-user-check" }} />
+                <Card props={{ data: approvel, name: "UnApproved Stud..", logo: "las la-user-times" }} />
+                <Card props={{ data: data.totalQuery, name: "Total Query", logo: "las la-bullhorn" }} />
+                <Card props={{ data: data.totalStudents, name: "Total Student", logo: "las la-user-friends" }} />
             </div>
             <div className="recent-grid">
                 <Recent />

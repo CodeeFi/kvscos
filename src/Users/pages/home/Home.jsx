@@ -1,13 +1,24 @@
 import React from 'react'
-import Button from '@mui/material/Button';
-import { Link } from "react-router-dom";
+
+import Header from "../../components/Header/Header";
+import Courses from "../../components/Courses/Courses";
+import Campus from "../../components/campus/Campus";
+import Facility from "../../components/Facility/Facility";
+import Testmonail from "../../components/Testmonail/Testmonial";
+import Contect from "../../components/ContectUS/Contectus";
+import Footer from "../../components/Footer/Footer";
+import Faculty from "../../components/Faculty/Faculty";
 function Home() {
     return (
         <>
-            <Link to="/admin">
-                <Button variant="contained"> Admin Page </Button>
-            </Link>
-            <h2>This is user Home page</h2>
+            <Header />
+            <Courses />
+            <Campus />
+            <Facility />
+            <Faculty />
+            <Testmonail />
+            <Contect />
+            <Footer />
         </>
     )
 }

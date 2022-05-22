@@ -17,15 +17,15 @@ const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
 
 root.render(
-  // <React.StrictMode>
   <>
-    <ReactNotifications />
-    <QueryClientProvider client={Qclient}>
-      <App />
-      <ReactQueryDevtools initialIsOpen={false} />
-    </QueryClientProvider>
+    <React.StrictMode>
+      <ReactNotifications />
+      <QueryClientProvider client={Qclient}>
+        <App />
+        <ReactQueryDevtools initialIsOpen={false} />
+      </QueryClientProvider>
+    </React.StrictMode>
   </>
-  // </React.StrictMode>
 )
 
 // ReactDOM.render(

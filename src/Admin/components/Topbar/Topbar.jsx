@@ -18,7 +18,7 @@ function Topbar() {
                     <input type="text" placeholder="Search Hear" />
                 </div>
                 <div className="user-wrapper">
-                    <img src="download.jpg" width="40px" height="40px" alt="" />
+                    <img src={data?.imgUrl ? `${process.env.REACT_APP_API_HOST}/home/image/${data.imgUrl}` : "/download.jpg"} width="40px" height="40px" alt="" />
                     <div>
                         <h5>{data && `${data.firstName}  ${data.lastName}`}</h5><small>{data && data.adminType ? "super admin" : "admin"}</small>
                     </div>

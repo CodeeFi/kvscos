@@ -8,9 +8,7 @@ import Notification from "../conf/Notification"
 
 function StudentQuery() {
 
-
     const [toggle, setToggle] = useState({ id: null, isTrue: true, });
-
 
     const [reply, setReply] = useState({ id: "", name: "" });
     const replyFun = ({ id, name }) => {

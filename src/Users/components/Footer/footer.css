@@ -1,0 +1,22 @@
+.footer {
+    width: 90%;
+    text-align: center;
+    padding: 30px 20px;
+    margin: auto;
+}
+
+.footer h4 {
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+
+.college-icon {
+    padding: 10px;
+    margin: 10px;
+}
+
+.created-by>i {
+    color: red;
+}

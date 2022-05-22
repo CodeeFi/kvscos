@@ -10,22 +10,23 @@ function Login() {
 
     const navigate = useNavigate()
     const { register, handleSubmit } = useForm();
-    let data
+
 
     async function login(e) {
-        data = await api.post(`${apihost}/auth/admin/login`, e);
-        if (data.status > 200) {
+        try {
+            const data = await api.post(`${apihost}/auth/admin/login`, e);
+            Notification("Authorazition", "login Sucessfully", "success")
+            localStorage.setItem("admin-auth", JSON.stringify(data));
+            const res = api.setheader(data.token);
+            if (res)
+                return navigate("/admin");
+        } catch (error) {
             localStorage.setItem("admin-auth", "");
-            const err = JSON.parse(data);
-            console.log(err);
-            Notification("Authorazition", "invalid id and Password", "danger");
+            const e = JSON.parse(error.message);
+            Notification("Authorazition", e.msg, "danger");
             return false;
         }
-        Notification("Authorazition", "login Sucessfully", "success")
-        localStorage.setItem("admin-auth", JSON.stringify(data));
-        const res = api.setheader(data.token);
-        if (res)
-            return navigate("/admin");
+
     }
 
     return (

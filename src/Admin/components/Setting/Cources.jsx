@@ -57,7 +57,7 @@ function Cources({ props }) {
         <div className="studetntapproved courseList">
             <div className="card">
                 <div className="card-header">
-                    <h4>Teacher List</h4>
+                    <h4>Courses</h4>
                 </div>
                 <div className="card-body">
 

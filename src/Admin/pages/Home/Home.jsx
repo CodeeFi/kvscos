@@ -20,8 +20,8 @@ function Dashboard() {
     const navigate = useNavigate()
     const adminAuth = localStorage.getItem("admin-auth");
     const admin = JSON.parse(adminAuth);
-    const fetcher = () => api.get(`${process.env.REACT_APP_API_HOST}/admin/students`);
-    const { data, isLoading, isError, isSuccess } = useQuery("testingApi", fetcher);
+    const fetcher = () => api.get(`${process.env.REACT_APP_API_HOST}/admin/getProfile/${admin.id}`);
+    const { data, isLoading, isError, isSuccess } = useQuery("getProfile", fetcher);
 
     if (isLoading) {
         return <h2>Wait We testing Our System</h2>
@@ -45,7 +45,7 @@ function Dashboard() {
     return (
         <>
             <div className='Dashboard'>
-                <userDetails.Provider value={admin}>
+                <userDetails.Provider value={data}>
                     <Topbar />
                 </userDetails.Provider>
                 <div className="containers">
@@ -59,7 +59,7 @@ function Dashboard() {
                             <Route path='/resultUpload' element={<ResultUpload />}> </Route>
                             <Route path='/studentQuery' element={<StudentQuery />}> </Route>
                             <Route path='/publidNotice' element={<PublicNotice />}> </Route>
-                            <Route path='/profile' element={<Profile props={admin} />}> </Route>
+                            <Route path='/profile' element={<Profile props={data} />}> </Route>
                             <Route path='/setting' element={<Setting />}> </Route>
                         </Routes>
                     </div>
