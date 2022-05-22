@@ -7,7 +7,7 @@ function Faculty() {
             <section className='faculty'>
                 <h1>Our Faculty.</h1>
                 <div className="profile">
-                    <div className="card">
+                    <div className="profile-card">
                         <div className="profile-header">
                             <div className="banner"></div>
                             <div className="profileimg">
