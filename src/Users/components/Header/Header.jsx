@@ -33,9 +33,8 @@ function Header() {
                     </div>
                 </nav>
                 <div className="text-box">
-                    <h1>Worlds's Biggest University</h1>
-                    <p>Making website is now one of the easiest thing in the world. you just need to learn HTML, CSS,<br />
-                        JAVASCRIPT and you are good to go.
+                    <h1> India's Best University</h1>
+                    <p> <span id='punchLine'> Wrold is Hear Where You are?. </span> India's Best University.<br /> <span id="tagline"> उठो, जागो और तब तक नहीं रुको जब तक लक्ष्य ना प्राप्त हो जाए</span>
                     </p>
                     <a href="https://subharti.org" className="hero-btn">VISIT US TO KNOW MORE</a>
                 </div>

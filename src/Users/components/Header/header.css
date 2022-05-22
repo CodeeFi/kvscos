@@ -105,7 +105,7 @@ nav #menu,
 
 @media(max-width: 600px) {
     .text-box h1 {
-        font-size: 20px;
+        font-size: 29px;
     }
 
     .nav-links ul li {
@@ -154,4 +154,15 @@ nav #menu,
     font-size: 22px;
     cursor: pointer;
     padding: 10px;
+}
+
+#tagline {
+    color: #ddda17;
+    font-size: 12px;
+}
+
+#punchLine {
+    color: #f44336;
+    font-size: 15px;
+    font-weight: 500;
 }
