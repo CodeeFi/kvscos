@@ -1,14 +1,5 @@
 import React from 'react'
 import "./faculty.css";
-<<<<<<< HEAD
-import { Email, Facebook, Instagram, Twitter, } from '@mui/icons-material';
-import { useQuery } from 'react-query';
-import api from "../../../API/useApi"
-function Faculty() {
-    useQuery("getTeacherProfile", () => {
-        api.get()
-    })
-=======
 import { useQuery } from 'react-query';
 import api from "../../../API/useApi"
 import ProfileCard from './ProfileCard';
@@ -24,7 +15,6 @@ function Faculty() {
         return <h3>SomeThing Went Wrong</h3>
     }
 
->>>>>>> dev
     return (
         <>
             <section className='faculty'>
