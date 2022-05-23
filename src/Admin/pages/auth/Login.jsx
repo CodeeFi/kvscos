@@ -54,6 +54,7 @@ function Login() {
 
                 <p>Don't have an account? <Link to="/admin/register" className='text-color'>Sign Up</Link></p>
                 <Link to="null" className="text-color forgot-text">Forgot Password?</Link>
+                <Link to="/" className="color-back forgot-text">Back To Home</Link>
             </div>
         </div>
     )

@@ -2,7 +2,6 @@ import React from 'react'
 import { Email, Facebook, Instagram, Twitter } from '@mui/icons-material';
 
 function ProfileCard({ props }) {
-    console.log(props);
     return (
         <div className="profile-card">
             <div className="profile-header">

@@ -211,6 +211,11 @@ p {
     margin-top: 10px;
 }
 
+.color-back {
+    color: #000;
+}
+
+
 /*=== responsive ===*/
 @media screen and (max-width: 600px) {
     .form-container {
