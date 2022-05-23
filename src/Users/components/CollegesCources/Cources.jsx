@@ -8,7 +8,7 @@ function Cources({ props }) {
     console.log(props.id);
 
     const { data, isLoading, isError, isFetching } = useQuery(["getCources", props.id], () => {
-        return api.get(`${process.env.REACT_APP_API_HOST}/admin/getCourse/${props.id}`);
+        return api.get(`${process.env.REACT_APP_API_HOST}/home/getCourse/${props.id}`);
     }, {
         enabled: !!props.id
     });

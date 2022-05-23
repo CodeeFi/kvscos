@@ -8,7 +8,7 @@ import api from '../../../API/useApi'
 function College() {
 
     const { data, isLoading, isError, isFetching } = useQuery("getCollegeList", () => {
-        return api.get(`${process.env.REACT_APP_API_HOST}/admin/collegeList`);
+        return api.get(`${process.env.REACT_APP_API_HOST}/home/collegeList`);
     })
 
     if (isLoading || isFetching) {
