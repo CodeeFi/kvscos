@@ -204,7 +204,7 @@ function ResultUpload() {
 
                                     </div>
                                     <label htmlFor="semester">Semester</label>
-                                    <select required {...register("semester")} name="sessionStartYear" id="semester">
+                                    <select required {...register("semester")} name="semester" id="semester">
                                         <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>

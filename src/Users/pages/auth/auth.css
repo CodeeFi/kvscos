@@ -91,7 +91,7 @@
     border: 0;
     outline: none;
     border-radius: 30px;
-    margin-top: 14px;
+    margin-top: 7px;
     font-weight: 600;
     color: white;
 }
@@ -224,6 +224,12 @@ span {
     color: white;
 }
 
+.back-btn {
+    margin: 3px auto;
+    padding: 4px 5px;
+    display: block;
+    text-align: center;
+}
 
 /* Remove a aero on number fields */
 input::-webkit-outer-spin-button,

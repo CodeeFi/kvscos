@@ -9,7 +9,7 @@ import { useNavigate, } from 'react-router-dom';
 import College from "../../components/CollegesCources/College";
 import Cources from '../../components/CollegesCources/Cources';
 import { useQueryClient } from "react-query";
-
+import { Link } from "react-router-dom";
 function RegisterLogin() {
     const queryClint = useQueryClient()
     const nagivate = useNavigate();
@@ -17,7 +17,7 @@ function RegisterLogin() {
         Xleft: "10px",
         Yleft: "600px",
         Zleft: "0",
-        loginheight: "383px",
+        loginheight: "400px",
         loginMargin: "130px auto"
     });
 
@@ -112,7 +112,9 @@ function RegisterLogin() {
                             <input name='password' type="password" {...register("password")} className="input-field" placeholder="Enter Password" required />
                             <input type="checkbox" className="check-box" /><span>remember password</span>
                             <button type="submit" className="submit-btn">Log In</button>
+                            <Link className='back-btn' to="/home" > Back</Link>
                         </div>
+
                     </form>
                     {/* Register Section */}
                     <form key={2} onSubmit={handelSubmit2(RegisterSubmit)}>
@@ -171,6 +173,7 @@ function RegisterLogin() {
                             <input type="password" {...register2("repassword", { required: true, maxLength: 20, minLength: { value: 8, message: "password must be 8 charector Long" }, pattern: { value: /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/, message: "password must AlphaNumaric with spacial symbol" } })} className="input-field7" placeholder=" Re-Enter Password" name="repassword" required />
                             {error2.repassword && <p className='pwderror'>{error2?.repassword?.message}</p>}
                             <button type="submit" className="submit-btn">Register</button>
+
 
                         </div>
                     </form>

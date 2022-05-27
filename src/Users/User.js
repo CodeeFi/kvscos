@@ -20,7 +20,7 @@ function User() {
                 <Routes>
                     <Route exact path='/'>
                         <Route index element={<Home />}> </Route>
-                        <Route path='auth' element={<RegisterLogin />}> </Route>
+                        <Route path='/auth' element={<RegisterLogin />}> </Route>
 
                         <Route path='/result' element={<ProtectedRoute />}>
                             <Route path="/result" element={<Result />}> </Route>
