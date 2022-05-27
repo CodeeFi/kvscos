@@ -4,7 +4,7 @@ import { Outlet, Navigate } from "react-router-dom";
 function AuthUser() {
     try {
         const obj = JSON.parse(localStorage.getItem("userInfo"));
-        if (obj.secret)
+        if (obj?.token)
             return true;
     } catch (error) {
         console.log(error);

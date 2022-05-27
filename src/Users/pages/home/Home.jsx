@@ -8,7 +8,9 @@ import Testmonail from "../../components/Testmonail/Testmonial";
 import Contect from "../../components/ContectUS/Contectus";
 import Footer from "../../components/Footer/Footer";
 import Faculty from "../../components/Faculty/Faculty";
+import Notice from "../../components/Notice/Notice"
 function Home() {
+
     return (
         <>
             <Header />
@@ -16,6 +18,7 @@ function Home() {
             <Campus />
             <Facility />
             <Faculty />
+            <Notice />
             <Testmonail />
             <Contect />
             <Footer />

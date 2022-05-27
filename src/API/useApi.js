@@ -89,9 +89,15 @@ class Api {
 
 
 function ApiAuth() {
+    let admin
     const adminAuth = localStorage.getItem("admin-auth");
-    const admin = JSON.parse(adminAuth);
-    const token = admin?.token;
+    const userInfo = localStorage.getItem("userInfo");
+
+    if (adminAuth)
+        admin = JSON.parse(adminAuth);
+
+    const user = JSON.parse(userInfo);
+    const token = admin?.token ? admin?.token : user?.token;
     return new Api(token);
 }
 

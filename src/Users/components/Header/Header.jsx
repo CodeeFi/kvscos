@@ -1,8 +1,13 @@
-import React, { useRef } from 'react'
+import React, { useRef, useContext } from 'react'
 import "./header.css"
 import { Link } from "react-router-dom"
 import { Menu, Close } from '@mui/icons-material';
+import { context } from '../../User';
+import Logout from '../../pages/auth/Logout';
 function Header() {
+
+    const userInfo = useContext(context);
+    console.log(userInfo);
 
     const shownav = useRef()
     function navClick(data) {
@@ -25,9 +30,17 @@ function Header() {
                             <li><Link to="/home"> Home</Link> </li>
                             <li><Link to="/home/about"> About </Link> </li>
                             <li><Link to="/home/contect"> Contect Us </Link> </li>
-                            <li><Link to="/home/Notice"> Notice</Link> </li>
                             <li><Link to="/home/result"> Result</Link> </li>
-                            <li><Link to="/home/auth"> Login </Link></li>
+                            {
+                                userInfo ? (
+                                    <>
+                                        <li><h5 id='username'> Welcome {userInfo.first_name}</h5></li>
+                                        <li> <Logout /> </li>
+                                    </>
+                                ) :
+                                    <li><Link to="/home/auth"> Login </Link></li>
+                            }
+
                             <li><Link to="/admin"> Admin Login </Link></li>
                         </ul>
                     </div>

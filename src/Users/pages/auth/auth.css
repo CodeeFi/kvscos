@@ -220,6 +220,11 @@ span {
 }
 
 
+#logout {
+    color: white;
+}
+
+
 /* Remove a aero on number fields */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

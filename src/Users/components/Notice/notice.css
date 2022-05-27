@@ -1,0 +1,154 @@
+.conatiner-notice {
+
+    background-color: #f5f5f5
+}
+
+.noticeContainer {
+    width: 90%;
+    display: flex;
+    padding: 10px 11px;
+    margin: auto;
+}
+
+.noticeList {
+    flex: 3;
+    margin-right: 10px;
+}
+
+.notice {
+    display: flex;
+    padding: 10px 8px;
+    width: 90%;
+    margin: 5px auto;
+    background-color: white;
+    flex-direction: row;
+    border-radius: 7px;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+.noticeimg {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: bisque;
+}
+
+.notice-data {
+    padding: 4px 7px;
+}
+
+.notice-title {
+    white-space: nowrap;
+    width: 200px;
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+.noticedetails {
+    flex: 7
+}
+
+.img-notice-upload {
+    display: flex;
+    flex-direction: column;
+}
+
+.img-notice {
+    width: 70%;
+    height: 70%;
+    border-radius: 3px;
+    padding: 2px;
+    margin: 5px auto;
+}
+
+.notice-btn {
+    margin: 5px auto;
+    padding: 5px 9px;
+    background: none;
+    border: 1px solid rgb(224, 105, 8);
+    cursor: pointer;
+    color: #000;
+    font-size: medium;
+    width: 20%;
+}
+
+.seeMore {
+    display: none;
+}
+
+
+
+@media (max-width:600px) {
+    .noticedetails {
+        display: none;
+    }
+
+    .noticeList {
+        margin: auto;
+    }
+
+    .notice-data {
+        padding: 0px 0px;
+        margin: 3px 1px;
+    }
+
+    .seeMore {
+        text-decoration: none;
+        display: block;
+        padding: 5px 9px;
+    }
+}
+
+
+/* Deatil Notice. */
+
+.noticeDeatil {
+    background-color: #f5f5f5;
+}
+
+.notice-data-d {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: 10px auto;
+    padding: 10px;
+    align-items: center;
+    background-color: #ffffff;
+
+}
+
+.notice-data-d>* {
+    margin: 8px
+}
+
+.img-notice {
+    width: 90%;
+}
+
+.verified {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: green;
+}
+
+@media (max-width:600px) {
+
+    .notice-data-d {
+        width: 90%;
+    }
+
+    .notice-data-d {
+        padding-top: 30px;
+        min-height: calc(100vh - 30px);
+    }
+}
+
+.backtohome {
+    align-items: center;
+    padding: 6px 12px;
+    background-color: rgb(236, 236, 66);
+    color: black;
+    border-radius: 3px;
+}
